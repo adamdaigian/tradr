@@ -13,7 +13,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "Tradr" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -21,10 +21,22 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <%= render 'layouts/nav' %>
+    </nav>
 
-    <%= yield %>
+    <div id="signup_window" class="reveal-modal"></div>
+    <div id="login_window" class="reveal-modal"></div>
 
-    
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+
+      </div>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

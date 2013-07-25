@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Symbol:
+  = @stock.symbol
+%p
+  %b Quantity:
+  = @stock.quantity
+%p
+  %b Starting price:
+  = @stock.starting_price
+%p
+  %b User:
+  = @stock.user_id
+
+= link_to 'Edit', edit_stock_path(@stock)
+\|
+= link_to 'Back', stocks_path
