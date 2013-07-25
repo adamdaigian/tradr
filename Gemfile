@@ -9,7 +9,8 @@ gem 'pg'
 gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'quiet_assets'
-gem 'devise'
+# gem 'devise'
+gem 'stock_quote'
 
 group :development do
   gem 'pry-rails'

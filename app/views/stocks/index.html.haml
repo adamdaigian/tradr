@@ -1,11 +1,12 @@
 %h1 Listing stocks
 
+= render 'track'
+
 %table
   %tr
     %th Symbol
     %th Quantity
     %th Starting price
-    %th User
     %th
     %th
     %th
@@ -15,7 +16,6 @@
       %td= stock.symbol
       %td= stock.quantity
       %td= stock.starting_price
-      %td= stock.user_id
       %td= link_to 'Show', stock
       %td= link_to 'Edit', edit_stock_path(stock)
       %td= link_to 'Destroy', stock, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -16,3 +16,11 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+  $('#track_stock').on('submit', get_stock_data);
+
+  var get_stock_data = function(){
+    $.ajax = {};
+  };
+});
