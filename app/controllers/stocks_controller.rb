@@ -1,4 +1,6 @@
 class StocksController < ApplicationController
+  before_filter :require_authentication, except: [:index]
+
   # GET /stocks
   # GET /stocks.json
   def index
