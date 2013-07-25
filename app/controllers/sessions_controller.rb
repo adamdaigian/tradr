@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
   def new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.js
+    end
   end
 
   def create
