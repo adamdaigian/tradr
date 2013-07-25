@@ -1,3 +1,8 @@
 = form_tag stocks_path, id: 'track_stock', remote: true do
-  = text_field_tag :stock_symbol
+  .field
+    = label_tag :symbol
+    = text_field_tag :symbol
+  .field
+    = label_tag :quantity
+    = number_field_tag :quantity
   = submit_tag "Add stock to track"

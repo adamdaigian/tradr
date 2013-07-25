@@ -4,7 +4,11 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = current_user.stocks
+    if current_user
+      @stocks = current_user.stocks
+    else
+      @stocks = Stock.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
